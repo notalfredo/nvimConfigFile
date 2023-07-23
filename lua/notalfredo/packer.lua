@@ -6,7 +6,13 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
-
+  use({
+      'catppuccin/nvim',
+      as = 'catppuccin',
+      config = function()
+          vim.cmd.colorscheme "catppuccin"
+      end
+  })
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
@@ -40,5 +46,8 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+  use {'neoclide/coc.nvim', branch = 'release'}
+
+
 end)
 
