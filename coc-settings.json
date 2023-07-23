@@ -1,0 +1,8 @@
+{
+    "languageserver": {
+        "wgsl": {
+          "command": "wgsl_analyzer", // alternatively you can specify the absolute path to your binary.
+          "filetypes": ["wgsl"],
+         }
+    }
+}
